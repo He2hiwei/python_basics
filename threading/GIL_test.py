@@ -1,6 +1,5 @@
 import threading
 from queue import Queue
-import copy
 import time
 
 def job(l,q):
@@ -35,6 +34,10 @@ if __name__ == '__main__':
     print('multithreading: ',time.time()-s_t)
 
 """
+程序 threading 和 Normal 运行了一样多次的运算.
+但是我们发现 threading 却没有快多少, 按理来说,
+我们预期会要快3-4倍, 因为有建立4个线程, 但是并没有.
+这就是其中的 GIL 在作怪.
 output:
 1999998000000
 normal: 0.08509016036987305

@@ -33,3 +33,11 @@ if __name__ == '__main__':
     s_t = time.time()
     multithreading(l)
     print('multithreading: ',time.time()-s_t)
+
+"""
+output:
+1999998000000
+normal: 0.08509016036987305
+1999998000000
+multithreading:  0.03632998466491699
+"""
